@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-var api = 'https://e-shoopingcenter-sl.herokuapp.com';
+var api = 'https://backend-shoppingcenter.herokuapp.com';
 
 
     export const CommonGet = (controller, queryString) => {
