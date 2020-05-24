@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-var api = 'http://backend-shoppingcenter.herokuapp.com';
+var api = 'http://localhost:8181';
 
 
     export const CommonGet = (controller, queryString) => {
@@ -13,8 +13,7 @@ var api = 'http://backend-shoppingcenter.herokuapp.com';
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(requestbody),
-		
+            body: JSON.stringify(requestbody)
         };
 
         return fetch(api+'/'+controller,requestOptions);
@@ -25,8 +24,7 @@ var api = 'http://backend-shoppingcenter.herokuapp.com';
         const requestOptions = {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(requestbody),
-			
+            body: JSON.stringify(requestbody)
         };
 
         return fetch(api+'/'+controller,requestOptions);
@@ -38,7 +36,6 @@ export const CommonDeleteById = (controller, queryString) => {
     const requestOptions = {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
-		
 
     };
 
@@ -51,8 +48,7 @@ export const CommonDeleteAll = (controller, requestbody) => {
     const requestOptions = {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(requestbody),
-		// mode: 'no-cors'
+        body: JSON.stringify(requestbody)
     };
 
     return fetch(api+'/'+controller,requestOptions);
@@ -64,8 +60,7 @@ export const CommonUpdateById =  (controller,queryString, requestbody)=> {
     const requestOptions = {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(requestbody),
-		// mode: 'no-cors'
+        body: JSON.stringify(requestbody)
     };
 
     return fetch(api+'/'+controller+'/'+queryString,requestOptions);
